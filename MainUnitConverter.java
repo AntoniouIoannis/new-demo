@@ -4,10 +4,7 @@ public class MainUnitConverter {
     public static void main(String[] args) {
 
         int choice;
-        System.out.println("\n*********************************************************************");
-        System.out.println("* Καλώς Όρισες χρήστη στην Ενοποιημένη Εφαρμογή Μετατροπής Μονάδων  *");    
-        System.out.println("*********************************************************************");
-
+        
           System.out.println("+---------------------------------------------------------------------+");
           System.out.println("|               Ανά Οικογένεια / ανά Τύπο Μονάδας                     |");
           System.out.println("+---------------------------------------------------------------------+");
@@ -58,6 +55,12 @@ public class MainUnitConverter {
 
 
   }
+    
+        System.out.println("\n*********************************************************************");
+        System.out.println("* Καλώς Όρισες χρήστη στην Ενοποιημένη Εφαρμογή Μετατροπής Μονάδων  *");    
+        System.out.println("*********************************************************************");
+
+        
     public static void Temperature(){
         /*  Τ(κ) = =τ(c)+ 2731,15      &  T(k)= (5  * ( valueFahrenheit - 32 ) / 9) + 273,15      */
         Scanner Temper = new Scanner(System.in);
