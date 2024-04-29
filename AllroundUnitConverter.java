@@ -1,49 +1,24 @@
+package gr.aueb.cf6.myJavaProjects;
+
 import java.util.Scanner;
 
-public class MainUnitConverter {
-    public static void main(String[] args) {
-
+public class AllroundUnitConverter {
+    public static int main(String[] args) {
+        Scanner in = new Scanner(System.in);
         int choice;
-        System.out.println("\n*********************************************************************");
-        System.out.println("* Καλώς Όρισες χρήστη στην Ενοποιημένη Εφαρμογή Μετατροπής Μονάδων  *");    
-        System.out.println("*********************************************************************");
-
-          System.out.println("+---------------------------------------------------------------------+");
-          System.out.println("|               Ανά Οικογένεια / ανά Τύπο Μονάδας                     |");
-          System.out.println("+---------------------------------------------------------------------+");
-          System.out.println("|1. Διάσταση [ Επιφάνεια,    Μήκος,    Όγκος ]                        |");
-          System.out.println("|2. Ενέργεια [ Ενέργεια,    Θερμοκρασία,    Ισχύς ]                   |");
-          System.out.println("|3. ΕπιστήμηΥπολογιστών [ Αποθήκευση δεδομένων ]                      |");
-          System.out.println("|4. Κίνηση  [ Επιτάχυνση,    Ταχύτητα,    Ταχύτητα ανέμου ]           |");
-          System.out.println("|5. Μηχανική [Βάρος,    Δείκτης Μάζας Σώματος,    Δύναμη,    Ροπή ]   |");
-          System.out.println("|6. Νόμισμα [ Δολλάριο / Λίρα / Ευρώ / Γιέν ]                         |");
-          System.out.println("|7. Ώρα  [  Ζώνες χρόνου,    Ώρα ]                                    |");
-          System.out.println("+---------------------------------------------------------------------+");
-          System.out.println("|8. ΕΞΟΔΟΣ ΕΦΑΡΜΟΓΗΣ                                                  |");
-          System.out.println("|9. Δημιουργός                                                        |");
-          System.out.println("|10. Περί Εφαρμογής...                                                |");
-          System.out.println("+---------------------------------------------------------------------+");
-
-      //https://www.convertworld.com/el/
-
-        choice = in.nextInt();
-        //  https://www.unitconverters.net/    Length / Temp / Area / Volume / Weight / Time
-        System.out.println("You pick [ " + choice + ". ].");
-
-
-        /*  ΑΡΧΗ ΕΛΕΓΧΟΥ ΕΠΙΛΟΓΗΣ    ΚΑΙ ΠΡΟΟΔΟΥ ΠΡΟΓΡΑΜΜΑΤΟΣ*/
-        (int choice) {
-            if (choice < 1 || choice > 8) {
+   /*  ΑΡΧΗ ΕΛΕΓΧΟΥ ΕΠΙΛΟΓΗΣ    ΚΑΙ ΠΡΟΟΔΟΥ ΠΡΟΓΡΑΜΜΑΤΟΣ*/
+        public static int getResultFromChoiceOrError(char choice) {
+            if (choice < '1' || choice > '8') {
                 System.out.println("Error. try again ...");
                 isError = true;
                 return 0;
             }
             int num1 = 0;          int num2 = 0;            num1 = getOneInt();          num2 = getOneInt();
             switch (choice) {
-                case 1:
+                case '1':
                     return Temperature();
-                case 2:
-                    return
+                case '2':
+                    return sub(num1, num2);
                 case '3':
                     return mul(num1, num2);
                 case '4':
@@ -57,7 +32,16 @@ public class MainUnitConverter {
             }
 
 
-  }
+
+            choice = in.nextInt();
+    //  https://www.unitconverters.net/    Length / Temp / Area / Volume / Weight / Time
+        System.out.println("You pick [ " + choice + ". ].");
+
+
+        TimeFromSeconds();
+        CurrencyConvert();
+    }
+
     public static void Temperature(){
         /*  Τ(κ) = =τ(c)+ 2731,15      &  T(k)= (5  * ( valueFahrenheit - 32 ) / 9) + 273,15      */
         Scanner Temper = new Scanner(System.in);
@@ -69,9 +53,9 @@ public class MainUnitConverter {
         float valueKelvin = 0;
 
         final int CELSIOU_CONVERSION = 5 * (valueFahrenheit - 32) / 9;
-        final double KELVIN_CONVERSION = (5 * (valueFahrenheit - 32) / 9) + 273.15;
-        int valueCelsiou = CELSIOU_CONVERSION;
-        double  valueKelvin = KELVIN_CONVERSION;
+        final float KELVIN_CONVERSION = (5 * (valueFahrenheit - 32) / 9) + 273.15;
+        valueCelsiou = CELSIOU_CONVERSION;
+        valueKelvin = KELVIN_CONVERSION;
 
         System.out.printf("\nΈδωσες την τιμή %d  βαθμούς Fahrenheit που ισοδυναμεί με %d βαθμούς Κελσίου \n", valueFahrenheit, valueCelsiou);
         System.out.println("\n\nΟι δοκιμές για τον έλεγχο ορθότητας του προγράμματος έγινε με την υποστήιξη της ιστοσελίδας\n https://www.metric-conversions.org/el/temperature/fahrenheit-to-celsius.htm");
@@ -106,7 +90,7 @@ public class MainUnitConverter {
     }
 
 
-    public static void CurrencyConvert(); {
+    public static void CurrencyConvert() {
         Scanner giveEuros = new Scanner(System.in);
 
         int euros = 0, dollars = 0, totalCents = 0, remainingCents = 0, lr = 0, fr = 0, yien = 0;
@@ -116,7 +100,7 @@ public class MainUnitConverter {
         final int FR_PARITY = 99;
 
         System.out.print("\nPLease insert the amount in Euros: ");
-        // εδω θα ενημερωσουμε το συστημα οτι θα δεχτει απο χρηστη δεδομένα
+//        εδω θα ενημερωσουμε το συστημα οτι θα δεχτει απο χρηστη δεδομένα
         euros = giveEuros.nextInt();
 
         totalCents = euros * US_PARITY;  /*   για να δουμε ποσα δολαρια ειναι  */
@@ -137,4 +121,7 @@ public class MainUnitConverter {
         System.out.printf("\nEND OF PROGRAMM CURRENCY \n\n");
 
     }
+
+
+
 }
