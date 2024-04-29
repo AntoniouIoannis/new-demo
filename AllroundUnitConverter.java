@@ -3,46 +3,25 @@ package gr.aueb.cf6.myJavaProjects;
 import java.util.Scanner;
 
 public class AllroundUnitConverter {
-    public static int main(String[] args) {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int choice;
    /*  ΑΡΧΗ ΕΛΕΓΧΟΥ ΕΠΙΛΟΓΗΣ    ΚΑΙ ΠΡΟΟΔΟΥ ΠΡΟΓΡΑΜΜΑΤΟΣ*/
-        public static int getResultFromChoiceOrError(char choice) {
-            if (choice < '1' || choice > '8') {
-                System.out.println("Error. try again ...");
-                isError = true;
-                return 0;
-            }
-            int num1 = 0;          int num2 = 0;            num1 = getOneInt();          num2 = getOneInt();
-            switch (choice) {
-                case '1':
-                    return Temperature();
-                case '2':
-                    return sub(num1, num2);
-                case '3':
-                    return mul(num1, num2);
-                case '4':
-                    return div(num1, num2);
-                case '5':
-                    return mod(num1, num2);
-                default:
-                    System.out.println("Error. Try again ...");
-                    isError = true;
-                    return 0;
+
             }
 
 
 
-            choice = in.nextInt();
+
     //  https://www.unitconverters.net/    Length / Temp / Area / Volume / Weight / Time
-        System.out.println("You pick [ " + choice + ". ].");
 
 
-        TimeFromSeconds();
-        CurrencyConvert();
+
+        /*TimeFromSeconds();
+        CurrencyConvert();*/
     }
 
-    public static void Temperature(){
+    public static void Temperature(int){
         /*  Τ(κ) = =τ(c)+ 2731,15      &  T(k)= (5  * ( valueFahrenheit - 32 ) / 9) + 273,15      */
         Scanner Temper = new Scanner(System.in);
         int valueFahrenheit = 0;
@@ -50,7 +29,7 @@ public class AllroundUnitConverter {
         System.out.print("Δώσε την τιμή θερμοκρασίας Fahrenheit σε ακέραια μορφή:  ");
         valueFahrenheit = in.nextInt();
         int valueCelsiou = 0;
-        float valueKelvin = 0;
+        float valueKelvin = 0.0;
 
         final int CELSIOU_CONVERSION = 5 * (valueFahrenheit - 32) / 9;
         final float KELVIN_CONVERSION = (5 * (valueFahrenheit - 32) / 9) + 273.15;
