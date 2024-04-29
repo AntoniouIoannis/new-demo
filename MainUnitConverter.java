@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class MainUnitConverter {
     public static void main(String[] args) {
-
         int choice;
+
+        Title();
+        MainList();
         
           System.out.println("+---------------------------------------------------------------------+");
           System.out.println("|               Ανά Οικογένεια / ανά Τύπο Μονάδας                     |");
@@ -55,10 +57,29 @@ public class MainUnitConverter {
 
 
   }
-    
-        System.out.println("\n*********************************************************************");
-        System.out.println("* Καλώς Όρισες χρήστη στην Ενοποιημένη Εφαρμογή Μετατροπής Μονάδων  *");    
+    public static void Title(){
+        System.out.println("\n********************************************************************");
+        System.out.println("*    Καλώς Όρισες στην Ενοποιημένη Εφαρμογή Μετατροπής Μονάδων      *");    
         System.out.println("*********************************************************************");
+    }
+     public static void MainList(){
+         System.out.println("+---------------------------------------------------------------------+");
+         System.out.println("|               Ανά Οικογένεια / ανά Τύπο Μονάδας                     |");
+         System.out.println("+---------------------------------------------------------------------+");
+         System.out.println("|1. Διάσταση [ Επιφάνεια,    Μήκος,    Όγκος ]                        |");
+         System.out.println("|2. Ενέργεια [ Ενέργεια,    Θερμοκρασία,    Ισχύς ]                   |");
+         System.out.println("|3. ΕπιστήμηΥπολογιστών [ Αποθήκευση δεδομένων ]                      |");
+         System.out.println("|4. Κίνηση  [ Επιτάχυνση,    Ταχύτητα,    Ταχύτητα ανέμου ]           |");
+         System.out.println("|5. Μηχανική [Βάρος,    Δείκτης Μάζας Σώματος,    Δύναμη,    Ροπή ]   |");
+         System.out.println("|6. Νόμισμα [ Δολλάριο / Λίρα / Ευρώ / Γιέν ]                         |");
+         System.out.println("|7. Ώρα  [  Ζώνες χρόνου,    Ώρα ]                                    |");
+         System.out.println("+---------------------------------------------------------------------+");
+         System.out.println("|8. ΕΞΟΔΟΣ ΕΦΑΡΜΟΓΗΣ                                                  |");
+         System.out.println("|9. Δημιουργός                                                        |");
+         System.out.println("|10. Περί Εφαρμογής...                                                |");
+         System.out.println("+---------------------------------------------------------------------+");
+     }   
+
 
         
     public static void Temperature(){
@@ -140,4 +161,36 @@ public class MainUnitConverter {
         System.out.printf("\nEND OF PROGRAMM CURRENCY \n\n");
 
     }
+
+    public static void (Dimension){}
+    public static void (Area){}
+    public static void (Length){}
+    public static void (Volume){}
+
+    public static void (Energy){}
+    public static void (Temperature){}
+    public static void (Power){}
+
+    public static void (ComputerScience){}
+    public static void (DataStorage){}
+
+    public static void (Movement){}
+    public static void (Acceleration){}
+    public static void (Speed){}
+    public static void (WindSpeed){}
+
+    public static void (Mechanics){}
+    public static void (Weight){}
+    public static void (BodyMassIndex){}
+    public static void (Force){}
+    public static void (Torque){}
+
+    public static void (Currency){}
+    public static void (Dollar){}
+    public static void (PoundEuroYen){}
+
+    public static void (Time){}
+    public static void (TimeZones){}
+    public static void (Time){}
+    
 }
