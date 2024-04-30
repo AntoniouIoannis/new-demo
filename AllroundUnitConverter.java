@@ -6,26 +6,20 @@ public class AllroundUnitConverter {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int choice;
-   /*  ΑΡΧΗ ΕΛΕΓΧΟΥ ΕΠΙΛΟΓΗΣ    ΚΑΙ ΠΡΟΟΔΟΥ ΠΡΟΓΡΑΜΜΑΤΟΣ*/
+     /*  ΑΡΧΗ ΕΛΕΓΧΟΥ ΕΠΙΛΟΓΗΣ    ΚΑΙ ΠΡΟΟΔΟΥ ΠΡΟΓΡΑΜΜΑΤΟΣ
 
-            }
+     https://www.unitconverters.net/    Length / Temp / Area / Volume / Weight / Time
 
-
-
-
-    //  https://www.unitconverters.net/    Length / Temp / Area / Volume / Weight / Time
-
-
-
-        /*TimeFromSeconds();
-        CurrencyConvert();*/
+        TimeFromSeconds();
+        CurrencyConvert();
+     */
     }
 
     public static void Temperature(int){
-        /*  Τ(κ) = =τ(c)+ 2731,15      &  T(k)= (5  * ( valueFahrenheit - 32 ) / 9) + 273,15      */
+     // Τ(κ) = =τ(c)+ 2731,15      &  T(k)= (5  * ( valueFahrenheit - 32 ) / 9) + 273,15 
         Scanner Temper = new Scanner(System.in);
         int valueFahrenheit = 0;
-
+     
         System.out.print("Δώσε την τιμή θερμοκρασίας Fahrenheit σε ακέραια μορφή:  ");
         valueFahrenheit = in.nextInt();
         int valueCelsiou = 0;
@@ -40,7 +34,6 @@ public class AllroundUnitConverter {
         System.out.println("\n\nΟι δοκιμές για τον έλεγχο ορθότητας του προγράμματος έγινε με την υποστήιξη της ιστοσελίδας\n https://www.metric-conversions.org/el/temperature/fahrenheit-to-celsius.htm");
         System.out.printf("\nEND OF PROGRAMM Temperature \n\n");
     }
-
 
     public static void TimeFromSeconds() {
         Scanner CalcToDate = new Scanner(System.in);
@@ -68,7 +61,6 @@ public class AllroundUnitConverter {
         System.out.printf("\nEND OF PROGRAMM TimeFromSeconds \n\n");
     }
 
-
     public static void CurrencyConvert() {
         Scanner giveEuros = new Scanner(System.in);
 
@@ -79,7 +71,7 @@ public class AllroundUnitConverter {
         final int FR_PARITY = 99;
 
         System.out.print("\nPLease insert the amount in Euros: ");
-//        εδω θα ενημερωσουμε το συστημα οτι θα δεχτει απο χρηστη δεδομένα
+     // εδω θα ενημερωσουμε το συστημα οτι θα δεχτει απο χρηστη δεδομένα
         euros = giveEuros.nextInt();
 
         totalCents = euros * US_PARITY;  /*   για να δουμε ποσα δολαρια ειναι  */
@@ -98,9 +90,6 @@ public class AllroundUnitConverter {
         System.out.printf("\n%,d euros = %,d total Cents\n%,d dollars and %d cents \n\n", euros, totalYien, yien, remainingCents);
         System.out.printf("\n%,d euros = %,d total Cents\n%,d dollars and %d cents \n\n", euros, totalFrago, fr, remainingCents);
         System.out.printf("\nEND OF PROGRAMM CURRENCY \n\n");
-
     }
-
-
 
 }
