@@ -6,14 +6,16 @@ public class MainUnitConverter {
         MainList();
         Currency();
         TimeFromSeconds();
+        EightTimes();
+        
+        
     }
-
     public static void Title(){
         System.out.println("\n********************************************************************");
         System.out.println("*    Καλώς Όρισες στην Ενοποιημένη Εφαρμογή Μετατροπής Μονάδων      *");    
+        System.out.println("*    Καλώς Όρισες στην ΕΝΟΠΟΙΗΜΕΝΗ ΕΦΑΡΜΟΓΗ ΜΕΤΑΤΡΟΠΗΣ ΜΟΝΑΔΩΝ      *");    
         System.out.println("*********************************************************************");
     }
-    
     public static void MainList(){
          System.out.println("+---------------------------------------------------------------------+");
          System.out.println("|               Ανά Οικογένεια / ανά Τύπο Μονάδας                     |");
@@ -21,16 +23,24 @@ public class MainUnitConverter {
          System.out.println("|1. Διάσταση [ Επιφάνεια,    Μήκος,    Όγκος ]                        |");
          System.out.println("|2. Ενέργεια [ Ενέργεια,    Θερμοκρασία,    Ισχύς ]                   |");
          System.out.println("|3. ΕπιστήμηΥπολογιστών [ Αποθήκευση δεδομένων ]                      |");
-         System.out.println("|4. Κίνηση  [ Επιτάχυνση,    Ταχύτητα,    Ταχύτητα ανέμου ]           |");
-         System.out.println("|5. Μηχανική [Βάρος,    Δείκτης Μάζας Σώματος,    Δύναμη,    Ροπή ]   |");
-         System.out.println("|6. Νόμισμα [ Δολλάριο / Λίρα / Ευρώ / Γιέν ]                         |");
-         System.out.println("|7. Ώρα  [  Ζώνες χρόνου,    Ώρα ]                                    |");
+         System.out.println("|4. Κίνηση [ Επιτάχυνση,    Ταχύτητα,    Ταχύτητα ανέμου ]            |");
+         System.out.println("|5. Υγεία [Βάρος,    Δείκτης Μάζας Σώματος ]                          |");
+         System.out.println("|6. Μηχανική [Βάρος,    Δύναμη,    Ροπή ]                             |");
+         System.out.println("|7. Νόμισμα [ Δολλάριο / Λίρα / Ευρώ / Γιέν ]                         |");
+         System.out.println("|8. Ώρα  [  Ζώνες χρόνου,    Ώρα ]                                    |");
          System.out.println("+---------------------------------------------------------------------+");
-         System.out.println("|8. ΕΞΟΔΟΣ ΕΦΑΡΜΟΓΗΣ                                                  |");
-         System.out.println("|9. Δημιουργός                                                        |");
-         System.out.println("|10. Περί Εφαρμογής...                                                |");
+         System.out.println("|9. ΕΞΟΔΟΣ ΕΦΑΡΜΟΓΗΣ                                                  |");
+         System.out.println("|10. Δημιουργός                                                        |");
+         System.out.println("|11. Περί Εφαρμογής...                                                |");
          System.out.println("+---------------------------------------------------------------------+");
-    }   
+    }
+
+    public static void OneDimension(){}
+    public static void Area(){}
+    public static void Length(){}
+    public static void Volume (){}
+    
+    public static void TwoEnergy(){}
     public static void Temperature(){
         /*  Τ(κ) = =τ(c)+ 2731,15      &  T(k)= (5  * ( valueFahrenheit - 32 ) / 9) + 273,15      */
         Scanner Temper = new Scanner(System.in);
@@ -50,59 +60,26 @@ public class MainUnitConverter {
         System.out.println("\n\nΟι δοκιμές για τον έλεγχο ορθότητας του προγράμματος έγινε με την υποστήιξη της ιστοσελίδας\n https://www.metric-conversions.org/el/temperature/fahrenheit-to-celsius.htm");
         System.out.printf("\nEND OF PROGRAM Temperature \n\n");
     }
-    public static void TimeFromSeconds() {
-        Scanner getSeconds = new Scanner(System.in);
+    
+    public static void ThreeComputerScience(){}
+    public static void DataStorage(){}
 
-        final int SECS_PER_MINUTE = 60;
-        final int SECS_PER_HOUR = 60 * 60;
-        final int SECS_PER_DAY = 24 * 60 * 60;
+    public static void FourMovement(){}
+    public static void Movement(){}
+    public static void Acceleration(){}
+    public static void Speed(){}
+    public static void WindSpeed(){}
 
-        int days = 0;
-        int hours = 0;
-        int minutes = 0;
-        int totalSeconds = 0;
-        int remainingSeconds = 0;
-
-        System.out.print("Δώσε παρακαλώ την διάρκεια του χρόνου σε Δευτερόλεπτα  --->  ");
-        totalSeconds = getSeconds.nextInt();
-
-        days = totalSeconds / SECS_PER_DAY;
-        remainingSeconds = totalSeconds % SECS_PER_DAY;
-
-        hours = remainingSeconds / SECS_PER_HOUR;
-        remainingSeconds = remainingSeconds % SECS_PER_HOUR;
-
-        minutes = remainingSeconds / SECS_PER_MINUTE;
-        remainingSeconds = remainingSeconds % SECS_PER_MINUTE;
-
-        System.out.printf("Έδωσες διάρκεια χρόνου σε Δευτερόλεπτα: -- %,d --\nΑυτή είναι [ %d ] Ημέρες, \n[ %02d ] Ώρες, [ %02d ] Λεπτά και  [ %02d ] Δευτερόλεπτα.\n\n",
-                totalSeconds, days, hours, minutes, remainingSeconds);
-        System.out.println("\nEND OF PROGRAM TimeFromSeconds \n\n");
-    }
-    public static void (Dimension){}
-    public static void (Area){}
-    public static void (Length){}
-    public static void (Volume){}
-
-    public static void (Energy){}
-    public static void (Temperature){}
-    public static void (Power){}
-
-    public static void (ComputerScience){}
-    public static void (DataStorage){}
-
-    public static void (Movement){}
-    public static void (Acceleration){}
-    public static void (Speed){}
-    public static void (WindSpeed){}
-
-    public static void (Mechanics){}
-    public static void (Weight){}
-    public static void (BodyMassIndex){}
-    public static void (Force){}
-    public static void (Torque){}
-
-    public static void Currency(){
+    public static void FiveHealth(){}
+    public static void Weight(){} 
+    public static void BodyMassIndex(){}
+    
+    public static void SixEngineering(){}
+    public static void Weight(){}
+    public static void Force(){}
+    public static void Torque(){}
+    
+    public static void SevenCurrency(){
         Scanner giveEuros = new Scanner(System.in);
 
         double eurosEUR = 0.00, dollarsUSD = 0.00, liraGBP = 0.00;
@@ -142,8 +119,38 @@ public class MainUnitConverter {
     public static void Dollar(){}
     public static void PoundEuroYen(){}
 
-    public static void Times(){}
+    public static void EightTimes(){}
     public static void TimeZones(){}
-    public static void Time(){}
+    public static void Time(){
+        public static void TimeFromSeconds() {
+        Scanner getSeconds = new Scanner(System.in);
+
+        final int SECS_PER_MINUTE = 60;
+        final int SECS_PER_HOUR = 60 * 60;
+        final int SECS_PER_DAY = 24 * 60 * 60;
+
+        int days = 0;
+        int hours = 0;
+        int minutes = 0;
+        int totalSeconds = 0;
+        int remainingSeconds = 0;
+
+        System.out.print("Δώσε παρακαλώ την διάρκεια του χρόνου σε Δευτερόλεπτα  --->  ");
+        totalSeconds = getSeconds.nextInt();
+
+        days = totalSeconds / SECS_PER_DAY;
+        remainingSeconds = totalSeconds % SECS_PER_DAY;
+
+        hours = remainingSeconds / SECS_PER_HOUR;
+        remainingSeconds = remainingSeconds % SECS_PER_HOUR;
+
+        minutes = remainingSeconds / SECS_PER_MINUTE;
+        remainingSeconds = remainingSeconds % SECS_PER_MINUTE;
+
+        System.out.printf("Έδωσες διάρκεια χρόνου σε Δευτερόλεπτα: -- %,d --\nΑυτή είναι [ %d ] Ημέρες, \n[ %02d ] Ώρες, [ %02d ] Λεπτά και  [ %02d ] Δευτερόλεπτα.\n\n",
+                totalSeconds, days, hours, minutes, remainingSeconds);
+        System.out.println("\nEND OF PROGRAM TimeFromSeconds \n\n");
+    }
+    
     
 }
