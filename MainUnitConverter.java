@@ -157,14 +157,14 @@ public class MainUnitConverter {
         public static void TimeFromMinutes() {
         Scanner getMinutes = new Scanner(System.in);
 
-        int intValueMinutes = (int) (Math.random() * 999999) + 10000;
+        int RandomMinutes = (int) (Math.random() * 999999) + 10000;  // min 10.000 - max 999.999
             
-        //final BigInteger MS_PER_SECS = 1000;
+        final int MS_PER_SECS = 1000;
         final int SECS_PER_MINUTE = 60;
         final int SECS_PER_HOUR = 60 * 60;
         final int SECS_PER_DAY = 24 * 60 * 60;
 
-        //biginteger ms = 0;
+        int ms = 0;
         int days = 0;
         int hours = 0;
         int minutes = 0;
@@ -172,10 +172,10 @@ public class MainUnitConverter {
         int remainingSeconds = 0;
 
         System.out.print("Δώσε παρακαλώ την διάρκεια του χρόνου σε Λεπτά  --->  ");
-        totalSeconds = getSeconds.nextInt();
+        fetchMinutes = getMinutes.nextInt();
 
-        days = totalSeconds / SECS_PER_DAY;
-        remainingSeconds = totalSeconds % SECS_PER_DAY;
+        days = fetchMinutes / SECS_PER_DAY;
+        remainingSeconds = fetchMinutes % SECS_PER_DAY;
 
         hours = remainingSeconds / SECS_PER_HOUR;
         remainingSeconds = remainingSeconds % SECS_PER_HOUR;
@@ -186,7 +186,20 @@ public class MainUnitConverter {
         System.out.printf("Έδωσες διάρκεια χρόνου σε Δευτερόλεπτα: -- %,d --\nΑυτή είναι [ %d ] Ημέρες, \n[ %02d ] Ώρες, [ %02d ] Λεπτά και  [ %02d ] Δευτερόλεπτα.\n\n",
                 totalSeconds, days, hours, minutes, remainingSeconds);
         
-        System.out.printf("\nΤυχαία επιλογή χρόνου σε Λεπτά [ %d ]  ", intValueMinutes);
+        System.out.printf("\n--------------\nΤυχαία επιλογή χρόνου σε Λεπτά [ %d ]  ", RandomMinutes);
+
+        days_r = RandomMinutes / SECS_PER_DAY;
+        remainingSeconds_r = RandomMinutes % SECS_PER_DAY;
+
+        hours_s = remainingSeconds / SECS_PER_HOUR;
+        remainingSeconds_r = remainingSeconds_r % SECS_PER_HOUR;
+
+        minutes_r = remainingSeconds_r / SECS_PER_MINUTE;
+        remainingSeconds_r = remainingSeconds_r % SECS_PER_MINUTE;
+
+        System.out.printf("Έδωσες διάρκεια χρόνου σε Lεπτα: -- %,d --\nΑυτή είναι [ %d ] Ημέρες, \n[ %02d ] Ώρες, [ %02d ] Λεπτά και  [ %02d ] Δευτερόλεπτα.\n\n",
+                RandomMinutes, days_r, hours_r, minutes_r, remainingSeconds_r);
+            
         System.out.println("\nEND OF PROGRAM TimeFromSeconds \n\n");
     }
     
