@@ -4,6 +4,7 @@ public class MainUnitConverter {
     public static void main(String[] args) {
         Title();
         MainList();
+        RandomValue();
         Currency();
         TimeFromSeconds();
         EightTimes();
@@ -55,6 +56,16 @@ public class MainUnitConverter {
         System.out.println("ακολουθώντας πάντα και την βέλτιστη απλότητα και κατανόηση στην σύνταξή του!");
         System.out.println("\n\nΟ Δημιουργός\n___________________\nΑντωνίου Ιωάννης");
     }
+
+    public static void RandomValue() {
+
+    
+        int intValue = (int) (Math.random() * 16) + 1;
+        float floatValue = (float) (Math.random() * 6) + 1;
+
+        System.out.printf("(%d, %.3f)", intValue, floatValue);
+    }
+
 
     public static void OneDimension(){}
     public static void Area(){}
@@ -143,20 +154,24 @@ public class MainUnitConverter {
     public static void EightTimes(){}
     public static void TimeZones(){}
     public static void Time(){
-        public static void TimeFromSeconds() {
-        Scanner getSeconds = new Scanner(System.in);
+        public static void TimeFromMinutes() {
+        Scanner getMinutes = new Scanner(System.in);
 
+        int intValueMinutes = (int) (Math.random() * 999999) + 10000;
+            
+        //final BigInteger MS_PER_SECS = 1000;
         final int SECS_PER_MINUTE = 60;
         final int SECS_PER_HOUR = 60 * 60;
         final int SECS_PER_DAY = 24 * 60 * 60;
 
+        //biginteger ms = 0;
         int days = 0;
         int hours = 0;
         int minutes = 0;
         int totalSeconds = 0;
         int remainingSeconds = 0;
 
-        System.out.print("Δώσε παρακαλώ την διάρκεια του χρόνου σε Δευτερόλεπτα  --->  ");
+        System.out.print("Δώσε παρακαλώ την διάρκεια του χρόνου σε Λεπτά  --->  ");
         totalSeconds = getSeconds.nextInt();
 
         days = totalSeconds / SECS_PER_DAY;
@@ -170,6 +185,8 @@ public class MainUnitConverter {
 
         System.out.printf("Έδωσες διάρκεια χρόνου σε Δευτερόλεπτα: -- %,d --\nΑυτή είναι [ %d ] Ημέρες, \n[ %02d ] Ώρες, [ %02d ] Λεπτά και  [ %02d ] Δευτερόλεπτα.\n\n",
                 totalSeconds, days, hours, minutes, remainingSeconds);
+        
+        System.out.printf("\nΤυχαία επιλογή χρόνου σε Λεπτά [ %d ]  ", intValueMinutes);
         System.out.println("\nEND OF PROGRAM TimeFromSeconds \n\n");
     }
     
