@@ -9,6 +9,24 @@ public class MainUnitConverter {
         TimeFromSeconds();
         EightTimes();
         AboutApp();
+
+        /*
+        -----     sos  opos ch5 - CalculatorApp.java  ----
+        public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int choice = 0;
+        // se kathe epitimiti timh xanabgazei to menu  mexri 0 gia exodo!!!!!!
+        do {
+            System.out.println(" CRUD  (0 gia exodo):");
+            System.out.println("1.  (insert) ");
+            System.out.println("2.  (update) ");
+            System.out.println("3.  (delete) ");
+            System.out.println("4.  (select) ");
+            choice = in.nextInt();
+        } while (choice != 0);
+
+        System.out.println("Thanks!");
+        }*/
         
     }
     public static void Title(){
@@ -58,11 +76,8 @@ public class MainUnitConverter {
     }
 
     public static void RandomValue() {
-
-    
         int intValue = (int) (Math.random() * 16) + 1;
         float floatValue = (float) (Math.random() * 6) + 1;
-
         System.out.printf("(%d, %.3f)", intValue, floatValue);
     }
 
@@ -93,9 +108,39 @@ public class MainUnitConverter {
         System.out.printf("\nEND OF PROGRAM Temperature \n\n");
     }
     
-    public static void ThreeComputerScience(){}
-    public static void DataStorage(){}
+    
+    public static void DataStorage(){
+        System.out.printf("Type: %s, Size: %d bits, Min: %,d, Max: %,d\n", Integer.TYPE, Integer.SIZE, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        System.out.printf("Type: %s, Size: %d bits, Min: %d, Max: %d\n", Byte.TYPE, Byte.SIZE, Byte.MIN_VALUE, Byte.MAX_VALUE);
+        System.out.printf("Type: %s, Size: %d bits, Min: %d, Max: %d\n", Short.TYPE, Short.SIZE, Short.MIN_VALUE, Short.MAX_VALUE);
+        System.out.printf("Type: %s, Size: %d bits, Min: %,d, Max: %,d\n", Long.TYPE, Long.SIZE, Long.MIN_VALUE, Long.MAX_VALUE);
 
+        Scanner SizeData = new Scanner(System.in);
+        int fetchSizeData = 0;
+        System.out.print("Δώσε το μεγεθος σε ακέραια μορφή:  ");
+        fetchSizeData = SizeData.nextInt(); 
+       // public static void PowerApp() {
+   
+        //Scanner in = new Scanner(System.in);
+        int base = 0;
+        int power = 0;
+        int result = 1;
+        int i = 1;
+
+        System.out.println("Please insert base, power");
+        base = in.nextInt();
+        power = in.nextInt();
+
+        while (i <= power) {
+            result *= base;    // result = result * base;
+            i++;
+        }
+
+        System.out.printf("%d ^ %d = %,d\n", base, power, result);
+        // edv pio kato dino karfotes times
+        System.out.printf("2 ^ 8 = %d", (int) Math.pow(2, 8));
+    }
+        
     public static void FourMovement(){}
     public static void Movement(){}
     public static void Acceleration(){}
@@ -103,7 +148,11 @@ public class MainUnitConverter {
     public static void WindSpeed(){}
 
     public static void FiveHealth(){}
-    public static void Weight(){} 
+    public static void Weight(){
+        // github - ch3 - GradesApp.java
+        // ch3 TernaryOpApp.java
+
+    } 
     public static void BodyMassIndex(){}
     
     public static void SixEngineering(){}
