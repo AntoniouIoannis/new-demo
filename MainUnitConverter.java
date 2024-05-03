@@ -4,7 +4,8 @@ public class MainUnitConverter {
     public static void main(String[] args) {
         Title();
         MainList();
-        RandomValue();
+        //RandomValue();
+        //DataStorage();
         Currency();
         TimeFromSeconds();
         EightTimes();
@@ -12,9 +13,38 @@ public class MainUnitConverter {
 
         /*
         -----     sos  opos ch5 - CalculatorApp.java  ----
+        
+        switch (choice) {
+            case '1':
+                return OneDimension();
+            case '2':
+                return TwoEnergy();
+            case '3':
+                return DataStorage();
+            case '4':
+                return FourMovement();
+            case '5':
+                return FiveHealth();
+            case '6':
+                return SixEngineering();
+            case '7':
+                return SevenCurrency();
+            case '8':
+                return ;
+            case '9':
+                return 
+            case '10':
+                return ;
+            case '11':
+                return AboutApp();
+            default:
+                System.out.println("Error. Try again ...");
+                isError = true;
+                return 0;
         public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int choice = 0;
+        
         // se kathe epitimiti timh xanabgazei to menu  mexri 0 gia exodo!!!!!!
         do {
             System.out.println(" CRUD  (0 gia exodo):");
@@ -26,7 +56,8 @@ public class MainUnitConverter {
         } while (choice != 0);
 
         System.out.println("Thanks!");
-        }*/
+        }
+        */
         
     }
     public static void Title(){
@@ -82,12 +113,18 @@ public class MainUnitConverter {
     }
 
 
-    public static void OneDimension(){}
+    public static void OneDimension(){
+        Title();
+        //ypomenou oikogenias  θα υπαχει επιλογη για να γυρισει στον αρχικο πινακα
+    }
     public static void Area(){}
     public static void Length(){}
     public static void Volume (){}
     
-    public static void TwoEnergy(){}
+    public static void TwoEnergy(){
+        Title();
+        //ypomenou oikogenias  θα υπαχει επιλογη για να γυρισει στον αρχικο πινακα
+    }
     public static void Temperature(){
         /*  Τ(κ) = =τ(c)+ 2731,15      &  T(k)= (5  * ( valueFahrenheit - 32 ) / 9) + 273,15      */
         Scanner Temper = new Scanner(System.in);
@@ -110,11 +147,13 @@ public class MainUnitConverter {
     
     
     public static void DataStorage(){
+        /* χρησιμο για ...
         System.out.printf("Type: %s, Size: %d bits, Min: %,d, Max: %,d\n", Integer.TYPE, Integer.SIZE, Integer.MIN_VALUE, Integer.MAX_VALUE);
         System.out.printf("Type: %s, Size: %d bits, Min: %d, Max: %d\n", Byte.TYPE, Byte.SIZE, Byte.MIN_VALUE, Byte.MAX_VALUE);
         System.out.printf("Type: %s, Size: %d bits, Min: %d, Max: %d\n", Short.TYPE, Short.SIZE, Short.MIN_VALUE, Short.MAX_VALUE);
         System.out.printf("Type: %s, Size: %d bits, Min: %,d, Max: %,d\n", Long.TYPE, Long.SIZE, Long.MIN_VALUE, Long.MAX_VALUE);
-
+        */
+        
         Scanner SizeData = new Scanner(System.in);
         int fetchSizeData = 0;
         System.out.print("Δώσε το μεγεθος σε ακέραια μορφή:  ");
@@ -141,13 +180,19 @@ public class MainUnitConverter {
         System.out.printf("2 ^ 8 = %d", (int) Math.pow(2, 8));
     }
         
-    public static void FourMovement(){}
+    public static void FourMovement(){
+        Title();
+        //ypomenou oikogenias  θα υπαχει επιλογη για να γυρισει στον αρχικο πινακα
+    }
     public static void Movement(){}
     public static void Acceleration(){}
     public static void Speed(){}
     public static void WindSpeed(){}
 
-    public static void FiveHealth(){}
+    public static void FiveHealth(){
+        Title();
+        //ypomenou oikogenias  θα υπαχει επιλογη για να γυρισει στον αρχικο πινακα
+    }
     public static void Weight(){
         // github - ch3 - GradesApp.java
         // ch3 TernaryOpApp.java
@@ -155,12 +200,16 @@ public class MainUnitConverter {
     } 
     public static void BodyMassIndex(){}
     
-    public static void SixEngineering(){}
+    public static void SixEngineering(){
+        Title();
+        //ypomenou oikogenias  θα υπαχει επιλογη για να γυρισει στον αρχικο πινακα
+    }
     public static void Weight(){}
     public static void Force(){}
     public static void Torque(){}
     
     public static void SevenCurrency(){
+        Title();
         Scanner giveEuros = new Scanner(System.in);
 
         double eurosEUR = 0.00, dollarsUSD = 0.00, liraGBP = 0.00;
@@ -200,12 +249,16 @@ public class MainUnitConverter {
     public static void Dollar(){}
     public static void PoundEuroYen(){}
 
-    public static void EightTimes(){}
+    public static void EightTimes(){
+        Title();
+        // υπομενου οικογενειας
+    }
     public static void TimeZones(){}
     public static void Time(){
         public static void TimeFromMinutes() {
         Scanner getMinutes = new Scanner(System.in);
-
+        // μετα την επιλογη του θα δινω τυχαιο αριθμο που θα κανει ξανα τις πραξεις
+        // σε ms, sec, min, hour, day, week, month, year, decade 
         int RandomMinutes = (int) (Math.random() * 999999) + 10000;  // min 10.000 - max 999.999
             
         final int MS_PER_SECS = 1000;
