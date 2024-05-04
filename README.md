@@ -25,7 +25,8 @@
         ΦΩΤΟΔΕΝΤΡΟ - ΕΘΝΙΚΟΣ ΣΥΣΣΩΡΕΥΤΗΣ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ
         
         ΕΛΕΓΧΟΙ ΠΟΥ ΔΙΕΞΑΓΩ ΜΕ ΕΠΑΛΗΘΕΥΣΗ ΠΡΑΓΜΑΤΙΚΏΝ ΚΑΙ ΑΝΑΜΕΝΟΜΕΝΩΝ ΑΠΟΤΕΛΕΣΜΑΤΩΝ
-        ΑΠΟ ΤΟ https://www.advancedconverter.com/el/
+        ΑΠΟ ΤΟ https://www.advancedconverter.com/el/     &   synallagma.gr
         
         Ο Δημιουργός
+        nickname: "The Architect" (βλέπε MATRIX)  (χαχαα  asteiaki για εμας θα το αφαιρεσω στο τελος οτυ εργου)
        Αντωνίου Ιωάννης
